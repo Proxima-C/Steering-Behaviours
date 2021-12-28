@@ -94,7 +94,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94ff0ed04cdb6a408f71eb2c90d9b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hungerMax: 100
+  hungerCurrent: 0
+  hungerDecrease: 1
   radius: 10
+  attackRadius: 3
 --- !u!1 &8033257287177239240
 GameObject:
   m_ObjectHideFlags: 0
