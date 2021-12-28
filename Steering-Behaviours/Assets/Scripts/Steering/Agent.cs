@@ -17,9 +17,9 @@ public class Agent : MonoBehaviour
 
     private const float Epsilon = 0.05f;
 
-    public float VelocityLimit => velocityLimit;
-
     public Vector3 Velocity => velocity;
+
+    public float VelocityLimit { get => velocityLimit; set => velocityLimit = value; }
 
     public void ApplyForce(Vector3 force)
     {

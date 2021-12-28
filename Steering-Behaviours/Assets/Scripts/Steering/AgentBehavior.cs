@@ -5,9 +5,9 @@ public abstract class AgentBehavior : MonoBehaviour
     [SerializeField, Range(0, 3)]
     private float weight = 1f;
 
-    public float Weight => weight;
-
     protected Agent Agent;
+
+    public float Weight { get => weight; set => weight = value; }
 
     private void Awake()
     {
