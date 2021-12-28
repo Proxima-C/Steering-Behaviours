@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,6 +11,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform shootOrigin;
     [SerializeField] private float launchVelocity = 700f;
+
+    public int BulletsCount { get => bulletsCount; set => bulletsCount = value; }
+
+    public EventHandler OnBulletsCountChange;
 
     private void Awake()
     {
@@ -42,6 +47,7 @@ public class PlayerController : MonoBehaviour
             GameObject bullet = Instantiate(projectile, shootOrigin.position, shootOrigin.rotation);
             bullet.GetComponentInChildren<Rigidbody>().AddForce(shootOrigin.forward * launchVelocity);
             bulletsCount--;
+            OnBulletsCountChange?.Invoke(this, EventArgs.Empty);
         }
     }
 }
