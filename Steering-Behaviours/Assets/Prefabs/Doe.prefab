@@ -92,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4390583040522924172}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -109,9 +109,10 @@ GameObject:
   - component: {fileID: 4390583040771493754}
   - component: {fileID: 4390583040771493755}
   - component: {fileID: 4390583040771493752}
+  - component: {fileID: 5496055478712672261}
   m_Layer: 0
   m_Name: Doe
-  m_TagString: Untagged
+  m_TagString: Prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4390583040771493753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 50.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9fd95a393827d48b67c5996b808657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0.5
+  weight: 3
   circleDistance: 1
   circleRadius: 2
   angleChangeStep: 15
@@ -177,3 +178,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   objectToFlee: {fileID: 4390583040771493749}
+--- !u!114 &5496055478712672261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390583040771493753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6532794dc9897f04e867ea1f20671286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 15
